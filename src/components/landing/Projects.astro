@@ -61,7 +61,7 @@ function calculateAosDuration(index) {
       >
       </div>
       <h3
-        class="text-secondary text-base font-medium"
+        class="text-secondary text-lg font-medium"
         data-aos="fade-up"
         data-aos-duration="1500"
       >
@@ -71,28 +71,29 @@ function calculateAosDuration(index) {
     </div>
 
     <ul
-      class="mx-auto grid grid-cols-1  sm:grid-cols-2 text-secondary lg:grid-cols-4 items-start gap-6mt-32"
+      class="mx-auto grid grid-cols-1 sm:grid-cols-2 text-secondary lg:grid-cols-4 items-start gap-8 mt-32" <!-- Increased gap between grid items -->
       role="list"
     >
       {
         otherprojects.map((project, index) => (
           <li
-            class="flow-root h-full "
+            class="flow-root h-full"
             data-aos="fade-up"
             data-aos-duration={calculateAosDuration(index)}
           >
             <a href={project.url}>
               <div class="h-full flex flex-col justify-between">
                 <div>
-                  <p class="group-hover:text-secondary/70 text-secondary text-9xl font-black lg:rotate-90 xl:-translate-x-32 lg:-translate-x-20 lg:mb-8 xl:mb-0  lg:pb-8">
+                  <!-- Add margin below the large number (highlighted change) -->
+                  <p class="group-hover:text-secondary/70 text-secondary text-lg font-bold lg:rotate-90 xl:-translate-x-32 lg:-translate-x-20 lg:mb-8 xl:mb-0 lg:pb-8 **mb-6**">
                     0{index + 1}.
                   </p>
-                  <p class="italic shrink-0">{project.title}</p>
-                  <p class="text-3xl  mt-3 leading-6 indent-9">
+                  <!-- Add spacing between the title and description (highlighted change) -->
+                  <p class="italic shrink-0 text-lg **mb-4**">{project.title}</p>
+                  <p class="text-lg mt-3 leading-6">
                     {project.description}
                   </p>
                 </div>
-                
               </div>
             </a>
           </li>
